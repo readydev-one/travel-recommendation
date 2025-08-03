@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Travel Recommendation</title>
+    <style>
+        nav {
+            background-color: #f2f2f2;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 5px;
+        }
+
+        .search-bar button {
+            margin-left: 5px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search recommendations">
+            <button id="searchBtn">Search</button>
+            <button id="resetBtn">Reset</button>
+        </div>
+    </nav>
+    <div class="intro">
+        <h1>Welcome to Travel Explorer</h1>
+        <p>Discover amazing travel destinations based on your preferences. Whether you're looking for tropical beaches, cultural hotspots, or outdoor adventures — we have recommendations for you.</p>
+    </div>
+
+    <div id="results"></div>
+
+    <div class="social-links">
+        <a href="https://facebook.com" target="_blank">🌐 Facebook</a>
+        <a href="https://twitter.com" target="_blank">🐦 Twitter</a>
+        <a href="https://instagram.com" target="_blank">📸 Instagram</a>
+    </div>
+
+    <script>
+        const searchBtn = document.getElementById("searchBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const results = document.getElementById("results");
+        const input = document.getElementById("searchInput");
+
+        searchBtn.addEventListener("click", () => {
+            const query = input.value.trim();
+            if (query) {
+                results.innerHTML = `<p>Showing results for "<strong>${query}</strong>"</p>`;
+            }
+        });
+
+        resetBtn.addEventListener("click", () => {
+            input.value = '';
+            results.innerHTML = '';
+        });
+    </script>
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
