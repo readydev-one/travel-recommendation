@@ -5,11 +5,15 @@
     <title>Travel Recommendation</title>
     <style>
         nav {
+            position: relative;
+            z-index: 99;
             background-color: #f2f2f2;
             padding: 10px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 90%;
+            margin: 0 auto;
         }
 
         .nav-links a {
@@ -27,10 +31,38 @@
             margin-left: 5px;
             padding: 5px 10px;
         }
+        .intro {
+            position: relative;
+            z-index: 2;
+            font-family: 'Inter';
+            color: #f6f6f6;
+        }
+        #results {
+            position: relative;
+            z-index: 2;
+            font-family: 'Inter';
+            color: #f6f6f6;
+        }
     </style>
 </head>
-<body style="background-image: url('https://example.com/image.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-
+<body style="background-image: url('https://images.unsplash.com/photo-1750386167727-8cae51317fe8?q=80&w=2075&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); 
+        position: fixed;
+        top: 0;
+        left: 0; right: 0; background-repeat: no-repeat; width: 100%; overflow: hidden; object-fit: cover;">
+        <div style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom:0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;">
+    </div>
+  
     <nav>
         <div class="nav-links">
             <a href="index.html">Home</a>
@@ -47,6 +79,7 @@
         <h1>Welcome to Travel Explorer</h1>
         <p>Discover amazing travel destinations based on your preferences. Whether you're looking for tropical beaches, cultural hotspots, or outdoor adventures — we have recommendations for you.</p>
     </div>
+
 
     <div id="results"></div>
 
