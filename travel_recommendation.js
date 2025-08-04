@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const searchBtn = document.getElementById("search-btn");
-  const resetBtn = document.getElementById("reset-btn");
-  const searchInput = document.getElementById("search-input");
+  const searchBtn = document.getElementById("searchBtn");
+  const resetBtn = document.getElementById("resetBtn");
+  const searchInput = document.getElementById("searchInput");
   const resultsContainer = document.getElementById("results");
 
   let dataCache = null;
